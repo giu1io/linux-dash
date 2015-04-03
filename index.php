@@ -1,3 +1,10 @@
+<?php
+	//Check if the user is logged in correctly
+	session_start();
+	
+	if(!isset($_SESSION["logged"])||!$_SESSION["logged"])
+		header("Location: login.php"); //if not logged redirect to login.php
+?>
 <!DOCTYPE html>
 <html lang="en" ng-app="linuxDash">
     <head>
@@ -25,7 +32,7 @@
         <div class="hero">
             <h4 class="title">Linux Dash</h4>
 
-            <small>A simple linux dashboard</small>
+            <small>A simple linux dashboard - <a href="login.php?action=logout">Logout</a></small>
 
             <theme-switcher></theme-switcher>
 

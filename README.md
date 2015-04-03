@@ -12,7 +12,7 @@ A simple, low-overhead web dashboard for GNU / Linux. (~1MB)
 * A beautiful, simple web-based dashboard for monitoring a linux server
 * Only ~1MB on disk! *(.git removed)*
 * Live graphs, refresh-able widgets, and a growing # of supported modules
-* Drop-in installation for PHP (Apache, NGINX), Node.js, and Go 
+* Drop-in installation for PHP (Apache, NGINX)
 
 ## Installation
 
@@ -30,7 +30,8 @@ composer create-project afaqurk/linux-dash -s dev
 - Download the source at: https://github.com/afaqurk/linux-dash/archive/master.zip
 
 ### 2. Secure Linux Dash
-*It is strongly recommended that all Linux Dash installations be password protected. Please add htaccess protection or another security measure of your choice.*
+*Rename "config_exaple.php" to "config.php" and edit your configuration.*
+*Beware: secure login work only on PHP. Removed Node/Go files. *
 
 
 ### 3. Start Linux Dash
@@ -42,24 +43,8 @@ See the section for your platform.
   - For PHP + Apache setup follow the [Digital Ocean tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-linux-dash-on-ubuntu-14-04).
   - For help with nginx setup, see [this gist](https://gist.github.com/sergeifilippov/8909839) by [@sergeifilippov](https://github.com/sergeifilippov).
 
-#### Node.js
-Install NPM dependencies
-```
-npm install
-```
-Start Linux Dash 
-```
-node server
-```
-  - Default port is 80. You may change this in [server/index.js on line 8](https://github.com/afaqurk/linux-dash/blob/master/server/index.js#L8)
-
-#### Go
-Go to the `linux-dash/server` folder and run 
-```
-go run index.go
-```
-
-To build a binary, run `go build && ./server -h`. See [@tehbilly](https://github.com/sergeifilippov)'s notes [here](https://github.com/afaqurk/linux-dash/pull/281) for binary usage options
+### 4. Optional
+Replace img/logo.png with your logo
 
 ## Goals for v2.0
 - [x] Backend ported to ~~Python~~ shell scripts & python from PHP
