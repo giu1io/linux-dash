@@ -32,6 +32,7 @@ composer create-project afaqurk/linux-dash -s dev
 ### 2. Secure Linux Dash
 *Rename "config_exaple.php" to "config.php" and edit your configuration.*
 *Beware: secure login work only on PHP. Removed Node/Go files. *
+*The hashed password is stored locally in a cookie if you use check "remember me", this is not very secure and should not be used on devices that are not yours.*
 
 
 ### 3. Start Linux Dash
